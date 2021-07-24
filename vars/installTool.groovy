@@ -6,8 +6,12 @@ def call(String pkgName) {
 		withEnv(["JAVA_HOME=${java_home}/bin"]) {
 			version = System.getProperty("java.version");
 			print "Java Version : "+version
-			steps{
-				sh "JAVA_HOME : ${JAVA_HOME}"
+			stages{
+				stage{
+					steps{
+						sh "JAVA_HOME : ${JAVA_HOME}"
+					}
+				}
 			}
 		}
 	}else{
