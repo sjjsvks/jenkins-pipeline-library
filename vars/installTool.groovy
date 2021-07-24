@@ -6,15 +6,7 @@ def call(String pkgName) {
 		withEnv(["JAVA_HOME=${java_home}/bin"]) {
 			version = System.getProperty("java.version");
 			print "Java Version : "+version
-			pipeline{
-				stages{
-					stage{
-						steps{
-							sh "JAVA_HOME : ${JAVA_HOME}"
-						}
-					}
-				}
-			}
+			print JAVA_HOME
 		}
 	}else{
 		print "Out of Scope"
