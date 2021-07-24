@@ -6,7 +6,7 @@ def call(String pkgName) {
 		withEnv(["JAVA_HOME=${java_home}/bin"]) {
 			version = System.getProperty("java.version");
 			print "Java Version : "+version
-			node{
+			pipeline{
 				stages{
 					stage{
 						steps{
