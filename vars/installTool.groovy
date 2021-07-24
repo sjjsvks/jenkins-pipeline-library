@@ -7,7 +7,7 @@ def call(String pkgName) {
 		export JAVA_HOME="/home/cloud_user/Desktop/jdk-11.0.12"
 		export PATH="${JAVA_HOME}/bin:${PATH}"
 		
-		String version = System.getProperty("java.version");
+		version = System.getProperty("java.version");
 		print "Java Version : "+version
 		print "JAVA_HOME : "+JAVA_HOME
 	}else{
